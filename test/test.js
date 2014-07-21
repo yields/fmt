@@ -26,7 +26,7 @@ describe('fmt', function(){
 
   it('extensible', function(){
     fmt.f = format;
-    assert('floats: 1.00' == fmt('floats: 1.00', 1));
+    assert('floats: 1.00' == fmt('floats: %f', 1));
 
     function format(s){
       return Number(s || 0).toFixed(2);
